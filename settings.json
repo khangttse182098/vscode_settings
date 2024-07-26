@@ -1,0 +1,336 @@
+{
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "apc.activityBar": {
+    "itemMargin": 3,
+    "itemSize": 10,
+    "position": "bottom"
+  },
+  // apc custom css
+  "apc.electron": {
+    "titleBarStyle": "hiddenInset"
+  },
+  "apc.imports": [
+    "file:///c:/Users/ADMIN/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.3/dist/updateHandler.js",
+    "file:///c:/Users/ADMIN/.vscode/extensions/good-vim-mode/appearance.js",
+    "file:///c:/Users/ADMIN/.vscode/extensions/good-vim-mode/appearance.css"
+  ],
+  "apc.menubar.compact": true,
+  "apc.sidebar.titlebar": {
+    "fontSize": 12,
+    "height": 30
+  },
+  "apc.statusBar": {
+    "height": 30,
+    "position": "editor-bottom"
+  },
+  "apc.stylesheet": {
+    ".editor-actions": "display: none !important"
+  },
+  "background.autoInstall": false,
+  "background.backgroundOpacity": [0.9, 0.9, 0.9, 0.9],
+  "background.editorBackgrounds": [],
+  "background.windowBackgrounds": ["d:/picture_video/minecraft.jpg"],
+  "extensions.ignoreRecommendations": true,
+  //apc custom css
+  "breadcrumbs.enabled": false,
+  "code-runner.executorMap": {
+    "ahk": "autohotkey",
+    "applescript": "osascript",
+    "autoit": "autoit3",
+    "bat": "cmd /c",
+    "c": "clear && cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "clojure": "lein exec",
+    "coffeescript": "coffee",
+    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "crystal": "crystal",
+    "csharp": "scriptcs",
+    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    "dart": "dart",
+    "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fsharp": "fsi",
+    "go": "go run",
+    "groovy": "groovy",
+    "haskell": "runhaskell",
+    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "javascript": "node",
+    "julia": "julia",
+    "kit": "kitc --run",
+    "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+    "lisp": "sbcl --script",
+    "lua": "lua",
+    "nim": "nim compile --verbosity:0 --hints:off --run",
+    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "ocaml": "ocaml",
+    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    "perl": "perl",
+    "perl6": "perl6",
+    "php": "php",
+    "powershell": "powershell -ExecutionPolicy ByPass -File",
+    "python": "python -u",
+    "r": "Rscript",
+    "racket": "racket",
+    "ruby": "ruby",
+    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    "sass": "sass --style expanded",
+    "scala": "scala",
+    "scheme": "csi -script",
+    "scss": "scss --style expanded",
+    "shellscript": "bash",
+    "sml": "cd $dir && sml $fileName",
+    "swift": "swift",
+    "typescript": "ts-node",
+    "v": "v run",
+    "vbscript": "cscript //Nologo"
+  },
+  "code-runner.runInTerminal": true,
+  "code-runner.saveFileBeforeRun": true,
+  "editor.accessibilitySupport": "off",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 17,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.guides.indentation": false,
+  "editor.lightbulb.enabled": "off",
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
+  "editor.overviewRulerBorder": false,
+  "editor.renderLineHighlight": "none",
+  "editor.renderWhitespace": "none",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.stickyScroll.enabled": true,
+  "editor.suggest.insertMode": "replace",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 150,
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.associations": {
+    "*.java": "java"
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": false,
+    "plaintext": false,
+    "scminput": false
+  },
+  "gitlens.graph.minimap.additionalTypes": [
+    "localBranches",
+    "stashes",
+    "remoteBranches"
+  ],
+  "gitlens.graph.minimap.enabled": false,
+  "go.toolsManagement.autoUpdate": true,
+  "html.format.unformattedContentDelimiter": "<!--noformat-->",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "material-icon-theme.hidesExplorerArrows": true,
+  "material-ui-snippets.showNotesOnStartup": false,
+  "remote.SSH.remotePlatform": {
+    "64.227.1.44": "linux",
+    "68.183.28.162": "linux",
+    "SWProject": "linux"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.env.windows": {},
+  "terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font Propo",
+  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.tabs.enabled": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "update.mode": "default",
+  "vim.highlightedyank.color": "rgba(230, 97, 89, 0.7)",
+  "vim.highlightedyank.duration": 100,
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.textColor": "white",
+  "vim.hlsearch": true,
+  "vim.leader": "<Space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // NAVIGATION
+    // switch b/w buffers
+    {
+      "before": ["<S-h>"],
+      "commands": [":bprevious"]
+    },
+    {
+      "before": ["<S-l>"],
+      "commands": [":bnext"]
+    },
+    // splits
+    {
+      "before": ["leader", "v"],
+      "commands": [":vsplit"]
+    },
+    {
+      "before": ["leader", "s"],
+      "commands": [":split"]
+    },
+    // panes
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    //NAVIGATION
+    {
+      "after": ["<C-d>", "z", "z"],
+      "before": ["<C-d>"]
+    },
+    {
+      "after": ["<C-u>", "z", "z"],
+      "before": ["<C-u>"]
+    },
+    // NICE TO HAVE
+    {
+      "after": ["\"", "+", "y"],
+      "before": ["leader", "y"]
+    },
+    {
+      "after": ["\"", "+", "Y"],
+      "before": ["leader", "Y"]
+    },
+    {
+      "after": ["\"", "+", "p"],
+      "before": ["leader", "p"]
+    },
+    {
+      "after": ["\"", "+", "P"],
+      "before": ["leader", "P"]
+    },
+    {
+      "after": ["`", "."],
+      "before": ["m", "a"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["leader", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["leader", "e"],
+      "commands": ["workbench.files.action.focusFilesExplorer"],
+      "when": ["editorTextFocus"]
+    },
+    {
+      "before": ["leader", "w"],
+      "commands": [":w!"]
+    },
+    {
+      "before": ["leader", "q"],
+      "commands": [":q!"]
+    },
+    {
+      "before": ["leader", "x"],
+      "commands": [":x!"]
+    },
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["leader", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    // Stay in visual mode while indenting
+    {
+      "after": ["\"", "+", "y"],
+      "before": ["leader", "y"]
+    },
+    {
+      "after": ["\"", "+", "Y"],
+      "before": ["leader", "Y"]
+    },
+    {
+      "after": ["\"", "+", "p"],
+      "before": ["leader", "p"]
+    },
+    {
+      "after": ["\"", "+", "P"],
+      "before": ["leader", "P"]
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    },
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    // Move selected lines while staying in visual mode
+    {
+      "before": ["J"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    },
+    // toggle comment selection
+    {
+      "before": ["leader", "c"],
+      "commands": ["editor.action.commentLine"]
+    }
+  ],
+  "window.commandCenter": false,
+  "window.newWindowDimensions": "maximized",
+  "window.restoreFullscreen": false,
+  "window.title": "",
+  "workbench.activityBar.location": "hidden",
+  "workbench.colorCustomizations": {
+    "editorLineNumber.activeForeground": "#ffffff",
+    "editorLineNumber.foreground": "#999791",
+    "sideBar.background": "#202231",
+    "terminal.background": "#202231",
+    "terminal.foreground": "#202231"
+  },
+  "workbench.layoutControl.enabled": false,
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Serendipity Sunset"
+}
