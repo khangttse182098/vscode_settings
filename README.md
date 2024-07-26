@@ -9,4 +9,4 @@
 - Serendipity
 
 ## Screenshot:
-![screenshot]()
+![screenshot](screenshot.png)
