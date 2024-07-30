@@ -199,12 +199,16 @@
     },
     //NAVIGATION
     {
-      "after": ["<C-d>", "z", "z"],
-      "before": ["<C-d>"]
+      "before": ["<C-d>"],
+      "after": ["<C-d>", "z", "z"]
     },
     {
-      "after": ["<C-u>", "z", "z"],
-      "before": ["<C-u>"]
+      "before": ["<C-u>"],
+      "after": ["<C-u>", "z", "z"]
+    },
+    {
+      "before": ["<C-n>"],
+      "after": ["g", "b"]
     },
     // NICE TO HAVE
     {
@@ -312,6 +316,10 @@
     {
       "before": ["leader", "c"],
       "commands": ["editor.action.commentLine"]
+    },
+    {
+      "before": ["<C-n>"],
+      "after": ["g", "b"]
     }
   ],
   "window.commandCenter": false,
@@ -322,9 +330,9 @@
   "workbench.colorCustomizations": {
     "editorLineNumber.activeForeground": "#ffffff",
     "editorLineNumber.foreground": "#999791",
-    "sideBar.background": "#202231",
-    "terminal.background": "#202231",
-    "terminal.foreground": "#202231"
+    "sideBar.background": "#32302f",
+    "terminal.background": "#32302f",
+    "terminal.foreground": "#32302f"
   },
   "workbench.layoutControl.enabled": false,
   "workbench.sideBar.location": "right",
@@ -332,5 +340,5 @@
   "workbench.tips.enabled": false,
   "workbench.tree.renderIndentGuides": "none",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Serendipity Sunset"
+  "workbench.colorTheme": "Gruvbox Dark Soft"
 }
