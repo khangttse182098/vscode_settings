@@ -6,7 +6,7 @@
 - Error lens
 
 ## Theme:
-- Serendipity
+- Gruvbox Dark Soft
 
 ## Screenshot:
 ![screenshot](screenshot.png)
