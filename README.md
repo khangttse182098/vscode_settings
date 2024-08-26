@@ -1,6 +1,6 @@
 # My VScode settings & keybindings
 ## Extensions:
-- Vim
+- Vim (Shout out to the Primeagen)
 - Apc Cusomize UI++
 - Material Icon Theme
 - Error lens
