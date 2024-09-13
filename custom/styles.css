@@ -141,3 +141,13 @@
   font-size: 14px !important;
   font-weight: 600;
 }
+
+/* selected tab */
+.tab.tab-actions-right.sizing-fit.has-icon.tab-border-bottom.active.selected {
+  background-color: #504945 !important;
+}
+
+/* vscode icon */
+.window-appicon {
+  background-image: none !important;
+}
