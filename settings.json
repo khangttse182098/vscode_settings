@@ -8,15 +8,11 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "background.autoInstall": false,
   "background.backgroundOpacity": [0.9, 0.9, 0.9, 0.9],
+  "background.autoInstall": false,
   "background.editorBackgrounds": [],
   "background.useInvertedOpacity": true,
-  "background.windowBackgrounds": [
-    "d:/picture_video/minecraft.jpg",
-    "d:/picture_video/wave.jpg"
-  ],
-  //apc custom css
+  "background.windowBackgrounds": [],
   "breadcrumbs.enabled": false,
   "code-runner.executorMap": {
     "ahk": "autohotkey",
@@ -105,9 +101,9 @@
     "**/.git": false
   },
   "github.copilot.enable": {
-    "*": true,
-    "markdown": false,
+    "*": false,
     "plaintext": false,
+    "markdown": false,
     "scminput": false
   },
   "gitlens.graph.minimap.additionalTypes": [
@@ -321,11 +317,17 @@
     "editorLineNumber.activeForeground": "#ffffff",
     "editorLineNumber.foreground": "#999791"
   },
-  "workbench.colorTheme": "Gruvbox Material Dark",
   "workbench.iconTheme": "gruvbox-material-icons",
   "workbench.layoutControl.enabled": false,
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
-  "workbench.tree.renderIndentGuides": "none"
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.colorTheme": "Gruvbox Material Dark",
+  "workbench.productIconTheme": "bongocat",
+  "background.backgroundChangeTime": [3000, 0, 0, 0],
+  "tailwind-fold.autoFold": false,
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  }
 }
