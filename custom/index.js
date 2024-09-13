@@ -52,6 +52,8 @@ function updateVimMode(vim_lable_cmd) {
 document.addEventListener("DOMContentLoaded", () => {
   const observer = new MutationObserver((mutationsList, observer) => {
     const vim_lable_cmd = document.getElementById("vscodevim.vim.primary");
+    document.querySelector(".window-title").textContent = "🥖";
+
     if (vim_lable_cmd) {
       // Initial setup based on the current state
       updateVimMode(vim_lable_cmd);
