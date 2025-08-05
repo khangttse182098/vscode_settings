@@ -30,16 +30,17 @@
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
   },
-  // FILE TREE
   {
-    "command": "workbench.action.toggleSidebarVisibility",
-    "key": "ctrl+e"
-  },
-  {
-    "command": "workbench.files.action.focusFilesExplorer",
-    "key": "ctrl+e",
+    "key": "ctrl+shift+e",
+    "command": "multiCommand.toggleExplorerAndFocusFileExplorer",
     "when": "editorTextFocus"
   },
+  {
+    "key": "ctrl+shift+e",
+    "command": "multiCommand.toggleExplorerAndFocusEditor",
+    "when": "filesExplorerFocus"
+  },
+  // FILE TREE
   {
     "key": "a",
     "command": "explorer.newFile",
@@ -100,5 +101,15 @@
   {
     "key": "ctrl+w",
     "command": "-workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "ctrl+v",
+    "command": "periscope.openInHorizontalSplit",
+    "when": "periscopeActive"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "workbench.action.quickchat.toggle",
+    "when": "config.chat.agent.enabled && !chatSetupDisabled && !chatSetupHidden"
   }
 ]
