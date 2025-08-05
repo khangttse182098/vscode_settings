@@ -8,67 +8,8 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "background.backgroundOpacity": [0.9, 0.9, 0.9, 0.9],
-  "background.autoInstall": false,
-  "background.editorBackgrounds": [],
-  "background.useInvertedOpacity": true,
-  "background.windowBackgrounds": [],
+
   "breadcrumbs.enabled": false,
-  "code-runner.executorMap": {
-    "ahk": "autohotkey",
-    "applescript": "osascript",
-    "autoit": "autoit3",
-    "bat": "cmd /c",
-    "c": "clear && cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "clojure": "lein exec",
-    "coffeescript": "coffee",
-    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "crystal": "crystal",
-    "csharp": "scriptcs",
-    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
-    "dart": "dart",
-    "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "fsharp": "fsi",
-    "go": "go run",
-    "groovy": "groovy",
-    "haskell": "runhaskell",
-    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
-    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
-    "javascript": "node",
-    "julia": "julia",
-    "kit": "kitc --run",
-    "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
-    "lisp": "sbcl --script",
-    "lua": "lua",
-    "nim": "nim compile --verbosity:0 --hints:off --run",
-    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "ocaml": "ocaml",
-    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
-    "perl": "perl",
-    "perl6": "perl6",
-    "php": "php",
-    "powershell": "powershell -ExecutionPolicy ByPass -File",
-    "python": "python -u",
-    "r": "Rscript",
-    "racket": "racket",
-    "ruby": "ruby",
-    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
-    "sass": "sass --style expanded",
-    "scala": "scala",
-    "scheme": "csi -script",
-    "scss": "scss --style expanded",
-    "shellscript": "bash",
-    "sml": "cd $dir && sml $fileName",
-    "swift": "swift",
-    "typescript": "ts-node",
-    "v": "v run",
-    "vbscript": "cscript //Nologo"
-  },
-  "code-runner.runInTerminal": true,
-  "code-runner.saveFileBeforeRun": true,
   "editor.accessibilitySupport": "off",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
@@ -100,35 +41,20 @@
   "files.exclude": {
     "**/.git": false
   },
-  "github.copilot.enable": {
-    "*": false,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
-  },
   "gitlens.graph.minimap.additionalTypes": [
     "localBranches",
     "stashes",
     "remoteBranches"
   ],
   "gitlens.graph.minimap.enabled": false,
-  "go.toolsManagement.autoUpdate": true,
   "gruvbox-material-icons.folders.theme": "colorful",
-  "gruvboxMaterial.darkContrast": "soft",
   "gruvboxMaterial.italicKeywords": true,
   "html.format.unformattedContentDelimiter": "<!--noformat-->",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "liveServer.settings.donotShowInfoMsg": true,
   "material-icon-theme.hidesExplorerArrows": true,
-  "material-ui-snippets.showNotesOnStartup": false,
-  "path-intellisense.showHiddenFiles": true,
-  "remote.SSH.remotePlatform": {
-    "64.227.1.44": "linux",
-    "68.183.28.162": "linux",
-    "SWProject": "linux"
-  },
   "security.workspace.trust.untrustedFiles": "open",
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.env.windows": {},
   "terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font Propo",
   "terminal.integrated.fontSize": 18,
@@ -141,6 +67,7 @@
   "vim.highlightedyank.textColor": "white",
   "vim.hlsearch": true,
   "vim.leader": "<Space>",
+
   "vim.normalModeKeyBindingsNonRecursive": [
     // NAVIGATION
     // switch b/w buffers
@@ -151,6 +78,14 @@
     {
       "before": ["<S-l>"],
       "commands": [":bnext"]
+    },
+    {
+      "before": ["leader", "<S-h>"],
+      "commands": ["workbench.action.moveEditorLeftInGroup"]
+    },
+    {
+      "before": ["leader", "<S-l>"],
+      "commands": ["workbench.action.moveEditorRightInGroup"]
     },
     // splits
     {
@@ -197,16 +132,17 @@
       "before": ["leader", "y"]
     },
     {
-      "after": ["\"", "+", "Y"],
-      "before": ["leader", "Y"]
-    },
-    {
       "after": ["\"", "+", "p"],
       "before": ["leader", "p"]
     },
     {
-      "after": ["\"", "+", "P"],
-      "before": ["leader", "P"]
+      "before": ["leader", "P"],
+      "commands": [
+        {
+          "command": "periscope.search",
+          "when": "editorTextFocus"
+        }
+      ]
     },
     {
       "after": ["`", "."],
@@ -215,15 +151,6 @@
     {
       "before": ["leader", "k"],
       "commands": ["editor.action.showHover"]
-    },
-    {
-      "before": ["leader", "e"],
-      "commands": ["workbench.action.toggleSidebarVisibility"]
-    },
-    {
-      "before": ["leader", "e"],
-      "commands": ["workbench.files.action.focusFilesExplorer"],
-      "when": ["editorTextFocus"]
     },
     {
       "before": ["leader", "w"],
@@ -238,6 +165,10 @@
       "commands": [":x!"]
     },
     {
+      "before": ["leader", "g", "s"],
+      "commands": ["workbench.action.gotoSymbol"]
+    },
+    {
       "before": ["[", "d"],
       "commands": ["editor.action.marker.prev"]
     },
@@ -250,7 +181,11 @@
       "commands": ["editor.action.quickFix"]
     },
     {
-      "before": ["leader", "f"],
+      "before": ["<leader>", "c", "r"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["leader", "leader"],
       "commands": ["workbench.action.quickOpen"]
     },
     {
@@ -312,22 +247,55 @@
   "window.newWindowDimensions": "maximized",
   "window.restoreFullscreen": true,
   "window.title": "",
-  "workbench.activityBar.location": "hidden",
   "workbench.colorCustomizations": {
     "editorLineNumber.activeForeground": "#ffffff",
     "editorLineNumber.foreground": "#999791"
   },
-  "workbench.iconTheme": "gruvbox-material-icons",
   "workbench.layoutControl.enabled": false,
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
   "workbench.tree.renderIndentGuides": "none",
+  "multiCommand.commands": [
+    {
+      "command": "multiCommand.toggleExplorerAndFocusFileExplorer",
+      "sequence": [
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.files.action.focusFilesExplorer"
+      ]
+    },
+    {
+      "command": "multiCommand.toggleExplorerAndFocusEditor",
+      "sequence": [
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    },
+    {
+      "command": "multiCommand.toggleCopilotChat",
+      "sequence": ["workbench.action.chat.toggle"]
+    }
+  ],
+  "chat.commandCenter.enabled": false,
+  "gruvboxMaterial.darkContrast": "soft",
   "workbench.colorTheme": "Gruvbox Material Dark",
-  "workbench.productIconTheme": "bongocat",
-  "background.backgroundChangeTime": [3000, 0, 0, 0],
-  "tailwind-fold.autoFold": false,
-  "[rust]": {
-    "editor.defaultFormatter": "rust-lang.rust-analyzer"
-  }
+  "gruvboxMaterial.colorfulSyntax": true,
+  "workbench.iconTheme": "gruvbox-material-icons",
+  "periscope.rgGlobExcludes": [
+    "/dist/",
+    "package-lock.json",
+    "package.json",
+    "/node_modules/"
+  ],
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "typescriptreact": false
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "workbench.activityBar.location": "hidden",
+  "python.defaultInterpreterPath": "c:\\Users\\ADMIN\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "workbench.secondarySideBar.defaultVisibility": "hidden"
 }
