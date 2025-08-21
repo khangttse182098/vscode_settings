@@ -67,6 +67,7 @@
   "vim.highlightedyank.textColor": "white",
   "vim.hlsearch": true,
   "vim.leader": "<Space>",
+  "vim.camelCaseMotion.enable": true,
 
   "vim.normalModeKeyBindingsNonRecursive": [
     // NAVIGATION
@@ -152,10 +153,10 @@
       "before": ["leader", "k"],
       "commands": ["editor.action.showHover"]
     },
-    {
-      "before": ["leader", "w"],
-      "commands": [":w!"]
-    },
+    // {
+    //   "before": ["leader", "w"],
+    //   "commands": [":w!"]
+    // },
     {
       "before": ["leader", "q"],
       "commands": [":q!"]
@@ -271,6 +272,13 @@
     {
       "command": "multiCommand.toggleCopilotChat",
       "sequence": ["workbench.action.chat.toggle"]
+    },
+    {
+      "command": "multiCommand.toggleTerminalPanel",
+      "sequence": [
+        "workbench.action.togglePanel",
+        "workbench.action.terminal.focus"
+      ]
     }
   ],
   "chat.commandCenter.enabled": false,
