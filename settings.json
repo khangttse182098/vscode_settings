@@ -238,10 +238,7 @@
       "before": ["<C-n>"]
     }
   ],
-  "vscode_custom_css.imports": [
-    "file:///c:/Users/ADMIN/.vscode/extensions/good-vim-mode/appearance.js",
-    "file:///c:/Users/ADMIN/.vscode/extensions/good-vim-mode/appearance.css"
-  ],
+  "vscode_custom_css.imports": ["file:///d:/HomeCode/good-vim-mode/style.css"],
   "window.commandCenter": false,
   "window.menuBarVisibility": "compact",
   "window.newWindowDimensions": "maximized",
@@ -297,5 +294,27 @@
   "github.copilot.nextEditSuggestions.enabled": true,
   "workbench.activityBar.location": "hidden",
   "python.defaultInterpreterPath": "c:\\Users\\ADMIN\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
-  "workbench.secondarySideBar.defaultVisibility": "hidden"
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+
+  // hide title bar
+  "window.customTitleBarVisibility": "never",
+  "window.titleBarStyle": "native",
+  "custom-ui-style.electron": {
+    "frame": false
+  },
+  "custom-ui-style.stylesheet": {
+    ".monaco-workbench": {
+      "&:not(.fullscreen)": {
+        // Allow dragging on the activity-bar, status-bar, tabs-container, side-bar title...
+        ".activitybar, .statusbar, .tabs-container, .sidebar .composite.title": {
+          "-webkit-app-region": "drag",
+
+          // ...but still allow to click actions and items without dragging.
+          ".content .monaco-action-bar, .statusbar-item, .tab, .title .title-actions .action-label": {
+            "-webkit-app-region": "no-drag"
+          }
+        }
+      }
+    }
+  }
 }
