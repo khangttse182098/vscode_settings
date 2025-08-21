@@ -1,8 +1,8 @@
-#vscodevim\.vim\.primary a {
+/* #vscodevim\.vim\.primary a {
   color: #32302f;
   font-weight: 750 !important;
   font-size: 16px !important;
-}
+} */
 
 .insert-mode {
   background-color: #f4bf75;
@@ -21,9 +21,10 @@
   color: whitesmoke !important;
 }
 
-.dropdown-label {
+/* gear icon */
+/* .dropdown-label {
   display: none !important;
-}
+} */
 
 .composite.has-composite-bar.header-or-footer.footer {
   border-top: 0;
@@ -138,8 +139,9 @@
 
 /* window title */
 .window-title {
-  font-size: 14px !important;
-  font-weight: 600;
+  display: none !important;
+  /* font-size: 14px !important;
+  font-weight: 600; */
 }
 
 /* selected tab */
