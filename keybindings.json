@@ -11,14 +11,23 @@
     "command": "workbench.action.terminal.focusPrevious",
     "when": "terminalFocus"
   },
+  // Terminal
   {
     "key": "ctrl+shift+o",
-    "command": "workbench.action.togglePanel"
+    "command": "multiCommand.toggleTerminalPanel",
+    "when": "editorFocus"
   },
   {
     "key": "ctrl+shift+o",
+    "command": "workbench.action.togglePanel",
+    "when": "terminalFocus"
+  },
+
+  // toggle maximize when in panel mode
+  {
+    "key": "ctrl+shift+r",
     "command": "workbench.action.toggleMaximizedPanel",
-    "when": "!terminalFocus"
+    "when": "panelFocus"
   },
   {
     "key": "ctrl+shift+n",
@@ -33,7 +42,7 @@
   {
     "key": "ctrl+shift+e",
     "command": "multiCommand.toggleExplorerAndFocusFileExplorer",
-    "when": "editorTextFocus"
+    "when": "editorTextFocus && !explorerViewletVisible"
   },
   {
     "key": "ctrl+shift+e",
