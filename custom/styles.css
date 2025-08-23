@@ -141,12 +141,17 @@
 
 #command-blur {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.15);
   top: 0;
   left: 0;
-  backdrop-filter: blur(8px);
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.2s ease; /* smooth fade */
+}
+#command-blur.visible {
+  opacity: 1;
 }
 
 /* Command palette's input box placeholder. */
@@ -222,4 +227,10 @@
   > div.overlayWidgets
   > div.sticky-widget {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* file explorer title gif */
+.fe-gif {
+  width: 10px;
+  height: 10px;
 }
