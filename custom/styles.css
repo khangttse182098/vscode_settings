@@ -1,8 +1,9 @@
-/* #vscodevim\.vim\.primary a {
+#vscodevim\.vim\.primary a {
   color: #32302f;
   font-weight: 750 !important;
-  font-size: 16px !important;
-} */
+  font-size: 14px !important;
+  padding: 0px 5px;
+}
 
 .insert-mode {
   background-color: #f4bf75;
@@ -30,18 +31,38 @@
   border-top: 0;
 }
 
+/* sidebar title */
 .composite.title {
-  margin-bottom: 6px;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-items: center !important;
+}
+/* .composite.title:before {
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 1.1rem;
+  content: "💻";
+} */
+.composite.title h2 {
+  font-weight: bold !important;
+  font-size: 12px !important;
+  text-transform: uppercase;
 }
 
-.title-label {
+/* .title-label {
   margin-left: 80px;
-}
+} */
 
 /* sidebar title */
-.title-label h2 {
+/* .title-label h2 {
   font-weight: 700 !important;
   color: white !important;
+} */
+
+/* side bar */
+.part.sidebar {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
 }
 
 .statusbar-item.right.first-visible-item.last-visible-item a {
@@ -94,6 +115,7 @@
   border-left: none !important;
 }
 
+/* remove background for list */
 .monaco-list-rows {
   background: transparent !important;
 }
@@ -139,9 +161,9 @@
 
 /* window title */
 .window-title {
-  display: none !important;
-  /* font-size: 14px !important;
-  font-weight: 600; */
+  /* display: none !important; */
+  font-size: 14px !important;
+  font-weight: 600;
 }
 
 /* selected tab */
@@ -152,4 +174,52 @@
 /* vscode icon */
 .window-appicon {
   background-image: none !important;
+}
+
+/* three dots in code editor */
+#workbench\.parts\.editor
+  > div.content
+  > div
+  > div
+  > div
+  > div
+  > div.monaco-scrollable-element
+  > div.split-view-container
+  > div
+  > div
+  > div.title.tabs.show-file-icons
+  > div.tabs-and-actions-container
+  > div.editor-actions {
+  display: none !important;
+}
+
+/* three dots in files explorer */
+#workbench\.parts\.sidebar
+  > div.composite.title
+  > div.title-actions
+  > div
+  > div
+  > ul
+  > li {
+  display: none !important;
+}
+
+/* code fold */
+#workbench\.parts\.editor
+  > div.content
+  > div
+  > div
+  > div
+  > div
+  > div.monaco-scrollable-element
+  > div.split-view-container
+  > div
+  > div
+  > div.editor-container
+  > div
+  > div
+  > div.overflow-guard
+  > div.overlayWidgets
+  > div.sticky-widget {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25) !important;
 }
