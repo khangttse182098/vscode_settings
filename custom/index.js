@@ -1,77 +1,58 @@
-//vim stuff
-
 // Function to update the VIM mode based on the ariaLabel
 function updateVimMode(vim_lable_cmd) {
-  const ariaLabel = vim_lable_cmd.firstChild.ariaLabel;
+  const target = vim_lable_cmd.firstChild;
+  const ariaLabel = target.ariaLabel;
+
+  let newText = "";
+  let newClass = "";
 
   if (ariaLabel === "-- INSERT --") {
-    vim_lable_cmd.firstChild.textContent = "INSERT";
-    vim_lable_cmd.firstChild.classList.add("insert-mode");
-    vim_lable_cmd.firstChild.classList.remove(
-      "normal-mode",
-      "action-mode",
-      "visual-mode"
-    );
+    newText = "INSERT";
+    newClass = "insert-mode";
   } else if (ariaLabel === "-- NORMAL --") {
-    vim_lable_cmd.firstChild.textContent = "NORMAL";
-    vim_lable_cmd.firstChild.classList.add("normal-mode");
-    vim_lable_cmd.firstChild.classList.remove(
-      "insert-mode",
-      "action-mode",
-      "visual-mode"
-    );
-  } else if (
-    ariaLabel === "-- VISUAL --" ||
-    ariaLabel === "-- VISUAL LINE --" ||
-    ariaLabel === "-- VISUAL BLOCK --"
-  ) {
-    if (ariaLabel === "-- VISUAL --") {
-      vim_lable_cmd.firstChild.textContent = "VISUAL";
-    } else if (ariaLabel === "-- VISUAL LINE --") {
-      vim_lable_cmd.firstChild.textContent = "VISUAL LINE";
-    } else if (ariaLabel === "-- VISUAL BLOCK --") {
-      vim_lable_cmd.firstChild.textContent = "VISUAL BLOCK";
-    }
-
-    vim_lable_cmd.firstChild.classList.add("visual-mode");
-    vim_lable_cmd.firstChild.classList.remove(
-      "insert-mode",
-      "action-mode",
-      "normal-mode"
-    );
+    newText = "NORMAL";
+    newClass = "normal-mode";
+  } else if (ariaLabel === "-- VISUAL --") {
+    newText = "VISUAL";
+    newClass = "visual-mode";
+  } else if (ariaLabel === "-- VISUAL LINE --") {
+    newText = "VISUAL LINE";
+    newClass = "visual-mode";
+  } else if (ariaLabel === "-- VISUAL BLOCK --") {
+    newText = "VISUAL BLOCK";
+    newClass = "visual-mode";
   } else {
-    vim_lable_cmd.firstChild.classList.add("action-mode");
-    vim_lable_cmd.firstChild.classList.remove(
-      "insert-mode",
-      "visual-mode",
-      "normal-mode"
-    );
+    newText = target.textContent; // leave unchanged
+    newClass = "action-mode";
   }
+
+  // Only update if something actually changed (prevents infinite loops)
+  if (target.textContent !== newText) {
+    target.textContent = newText;
+  }
+
+  target.className = newClass;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const observer = new MutationObserver((mutationsList, observer) => {
+  const observer = new MutationObserver(() => {
     const vim_lable_cmd = document.getElementById("vscodevim.vim.primary");
-    document.querySelector(".window-title").textContent = "🥖";
 
     if (vim_lable_cmd) {
-      // Initial setup based on the current state
+      // Initial setup
       updateVimMode(vim_lable_cmd);
 
-      // Observe changes in the element's attributes or children
+      // Watch only ariaLabel changes (no need for childList/subtree)
       const observer_vim = new MutationObserver(() => {
         updateVimMode(vim_lable_cmd);
       });
 
       observer_vim.observe(vim_lable_cmd.firstChild, {
-        childList: true,
-        subtree: true,
         attributes: true,
-        characterData: true,
-        attributeFilter: ["textContent"],
+        attributeFilter: ["aria-label"], // correct attribute to watch
       });
 
-      // Stop the observer once the element is found and processed
+      // Stop global observer after found
       observer.disconnect();
     }
   });
