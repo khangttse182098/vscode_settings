@@ -47,8 +47,16 @@ function runMyScript() {
 
     const overlay = document.createElement("div");
     overlay.id = "command-blur";
-    overlay.addEventListener("click", () => overlay.remove());
+
+    // click to dismiss with animation
+    overlay.addEventListener("click", () => handleEscape());
+
     targetDiv.appendChild(overlay);
+
+    // trigger transition after append
+    requestAnimationFrame(() => {
+      overlay.classList.add("visible");
+    });
 
     toggleWidgets(false);
   } catch (err) {
@@ -58,7 +66,14 @@ function runMyScript() {
 
 function handleEscape() {
   try {
-    document.getElementById("command-blur")?.remove();
+    const overlay = document.getElementById("command-blur");
+    if (overlay) {
+      overlay.classList.remove("visible");
+      // remove after transition ends
+      overlay.addEventListener("transitionend", () => overlay.remove(), {
+        once: true,
+      });
+    }
     toggleWidgets(true);
   } catch (err) {
     console.error("Error in handleEscape:", err);
@@ -68,10 +83,10 @@ function handleEscape() {
 function toggleWidgets(show) {
   try {
     const stickyWidgets = document.querySelectorAll(".sticky-widget");
-    stickyWidgets.forEach((w) => (w.style.opacity = show ? 1 : 0));
+    stickyWidgets.forEach((w) => (w.style.zIndex = show ? 4 : 0));
 
     const treeWidget = document.querySelector(".monaco-tree-sticky-container");
-    if (treeWidget) treeWidget.style.opacity = show ? 1 : 0;
+    if (treeWidget) treeWidget.style.zIndex = show ? 4 : 0;
   } catch (err) {
     console.error("Error in toggleWidgets:", err);
   }
